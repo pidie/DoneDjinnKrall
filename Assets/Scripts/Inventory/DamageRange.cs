@@ -7,6 +7,7 @@ namespace Inventory
 	public class DamageRange
 	{
 		[SerializeField] private int min, max;
+		// todo : test - delete this
 
 		public DamageRange(int min, int max)
 		{
