@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Inventory.Enhancements
 {
-	public class Enhancement : ScriptableObject
+	public class Enhancement
 	{
 		public string title;
 		public int level;
