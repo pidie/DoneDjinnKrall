@@ -69,6 +69,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -472,6 +473,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      rusty_dagger: -5557420877203330147
+      knife: -5039132156621874023
+      sai: -1499788451389146327
+      bow: 1098179606456428539
+      long_bow: -7888296697152109952
+      elven_sword: 3975059572695951870
+      bastard_sword: 853742892412031643
+      long_sword: 698664279297640794
+      magic_bow: 8101326686158321518
+      halberd: -4855083040135353222
+      greatsword: -7706190253212291482
+      falchion: -8508422110644630109
+      katana: 2912464402848211330
+      mecha_sword: -2600240032574155362
+      staff: 2920547695714349933
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
