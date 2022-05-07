@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643ca0310bec15546a0307e577036ee9, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  questName: Test
+  description: Shavael wanted to speak with you about something - you should go find
+    her.
+  notes: '- find shavael => recieve quest
+
+    - go to hamlet / kill the corrupted
+    there
+
+    - return to shavael
+
+    - help save shavael from ambush (kill the
+    demon lord)'
+  steps:
+  - instructions: Find Shavael
+    objectives:
+    - objectiveType: 0
+      gameFlag: {fileID: 11400000, guid: ccc0cc295174b5844a41ea10100ef090, type: 2}
+      required: 0
+  - instructions: Go to the hamlet
+    objectives:
+    - objectiveType: 0
+      gameFlag: {fileID: 11400000, guid: ff7ec017800fe3144b26f8ae9905bb7e, type: 2}
+      required: 0
+    - objectiveType: 0
+      gameFlag: {fileID: 11400000, guid: fc247f638d1769a4781cea5ac33152ff, type: 2}
+      required: 10
+  - instructions: Return to Shavael for your reward
+    objectives:
+    - objectiveType: 0
+      gameFlag: {fileID: 11400000, guid: b48035647ed66ad49baa4d5e8e9773ce, type: 2}
+      required: 0
