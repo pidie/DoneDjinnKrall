@@ -1,8 +1,7 @@
 using System;
-using UnityEngine.cs;
+using UnityEngine;
 
 public class EssenceType
 {
     [SerializeField] private Sprite icon;
-    
 }

@@ -17,7 +17,8 @@ namespace UserInterface
 
 		public void ToggleCanvas(bool value = true)
 		{
-			ToggleOtherCanvases();
+			if (value)
+				ToggleOtherCanvases();
 			
 			canvasGroup.alpha = value ? menuTransparency : 0;
 			canvasGroup.interactable = value;

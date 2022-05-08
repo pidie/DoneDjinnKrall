@@ -12,10 +12,12 @@ namespace Inventory
         public static event Action UpdateInventory;
 
         private const int InventorySize = 60;
-        [SerializeField] private ItemSlot[] itemSlots = new ItemSlot[InventorySize];
+        [SerializeField] private ItemSlot[] itemSlots;
 
         private void Awake()
         {
+            itemSlots = new ItemSlot[InventorySize];
+            
             Instance = this;
             for (var i = 0; i < InventorySize; i++)
                 itemSlots[i] = new ItemSlot();

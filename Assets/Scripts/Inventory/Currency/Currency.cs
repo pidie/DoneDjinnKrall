@@ -6,7 +6,7 @@ namespace Inventory.Currency
     {
         protected int value;
 
-        protected void OnPickUp() => HandlePickUp();
+        public void OnPickUp() => HandlePickUp();
 
         protected virtual void HandlePickUp()
         {
@@ -16,6 +16,6 @@ namespace Inventory.Currency
 
     interface ICollectable
     {
-        protected void OnPickUp();
+        void OnPickUp();
     }
 }
