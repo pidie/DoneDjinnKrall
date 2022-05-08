@@ -15,8 +15,10 @@ namespace UserInterface
 
 		private void Start() => _flagsByName = allFlags.ToDictionary(k => k.name.Replace(" ", ""), v => v);
 
+		#if UNITY_EDITOR
 		private void OnValidate() => allFlags = Extensions.GetAllInstances<GameFlag>();
-
+		#endif
+		
 		public void Set(string flagName, string value)
 		{
 			if (_flagsByName.TryGetValue(flagName, out var flag) == false)

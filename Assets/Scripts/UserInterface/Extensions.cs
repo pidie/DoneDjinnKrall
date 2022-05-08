@@ -4,6 +4,7 @@ namespace UserInterface
 {
 	public static class Extensions
 	{
+		#if UNITY_EDITOR
 		public static T[] GetAllInstances<T>() where T : UnityEngine.Object
 		{
 			var guids = AssetDatabase.FindAssets("t:" + typeof(T).Name);
@@ -16,5 +17,6 @@ namespace UserInterface
 
 			return a;
 		}
+		#endif
 	}
 }
