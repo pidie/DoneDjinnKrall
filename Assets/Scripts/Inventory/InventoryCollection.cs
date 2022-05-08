@@ -1,15 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using Persistence;
 using UnityEngine;
 
 namespace Inventory
 {
-    public class InventoryManager : MonoBehaviour
+    public class InventoryCollection : MonoBehaviour
     {
-        public static InventoryManager Instance { get; private set; }
-        public static event Action UpdateInventory;
+        public static InventoryCollection Instance { get; private set; }
+        // public static event Action UpdateInventory;
 
         private const int InventorySize = 60;
         [SerializeField] private ItemSlot[] itemSlots;
@@ -40,6 +38,10 @@ namespace Inventory
             }
         }
 
+        public ItemSlot GetItemSlotByIndex(int index) => itemSlots[index];
+
+        public ItemSlot[] GetAllItems() => itemSlots;
+
         [ContextMenu(nameof(MoveItemsRight))]
         private void MoveItemsRight()
         {
@@ -68,4 +70,3 @@ namespace Inventory
         }
     }
 }
-

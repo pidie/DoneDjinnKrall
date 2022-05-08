@@ -11,7 +11,7 @@ namespace Items
         {
             if (other.CompareTag("Player"))
             {
-                InventoryManager.Instance.AddItem(item);
+                InventoryCollection.Instance.AddItem(item);
                 Destroy(gameObject);
             }
         }

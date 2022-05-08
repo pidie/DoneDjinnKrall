@@ -24,7 +24,7 @@ namespace Persistence
             _gameData = JsonUtility.FromJson<GameData>(json) ?? new GameData();
             
             GameFlagManager.Instance.Bind(_gameData.gameFlagDatas);
-            InventoryManager.Instance.Bind(_gameData.slotDatas);
+            InventoryCollection.Instance.Bind(_gameData.slotDatas);
         }
     }
 }
