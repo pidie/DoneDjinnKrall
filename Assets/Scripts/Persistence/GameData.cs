@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Flags;
+using Inventory;
 
 namespace Persistence
 {
@@ -16,12 +17,5 @@ namespace Persistence
 			gameFlagDatas = new List<GameFlagData>();
 			interactableDatas = new List<InteractableData>();
 		}
-	}
-
-	[Serializable]
-	public class SlotData
-	{
-		public string slotName;
-		public string itemName;
 	}
 }

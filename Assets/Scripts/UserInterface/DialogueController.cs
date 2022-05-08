@@ -83,7 +83,7 @@ namespace UserInterface
                 else if (inkyTag.StartsWith(FlagLabel))
                 {
                     var values = inkyTag.Split('.');
-                    FlagManager.Instance.Set(values[1], values[2]);
+                    GameFlagManager.Instance.Set(values[1], values[2]);
                 }
             }
         }

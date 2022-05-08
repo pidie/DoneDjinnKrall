@@ -1,5 +1,5 @@
 ﻿using System;
-using Persistence;
+using UnityEngine;
 
 namespace Inventory
 {
@@ -13,6 +13,8 @@ namespace Inventory
 
 		public void SetItem(Item item)
 		{
+			_slotData ??= new SlotData();
+			
 			_item = item;
 			_slotData.itemName = item?.name ?? string.Empty;
 		}
@@ -24,7 +26,15 @@ namespace Inventory
 		public void Bind(SlotData slotData)
 		{
 			_slotData = slotData;
-			// SetItem();
+			var item = Resources.Load<Item>("Items/" + slotData.itemName);
+			SetItem(item);
 		}
+	}
+	
+	[Serializable]
+	public class SlotData
+	{
+		public string slotName;
+		public string itemName;
 	}
 }

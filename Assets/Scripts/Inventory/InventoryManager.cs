@@ -26,7 +26,7 @@ namespace Inventory
         public void AddItem(Item item)
         {
             var firstSlotAvailable = itemSlots.FirstOrDefault(t => t.IsEmpty);
-            firstSlotAvailable.SetItem(item);
+            firstSlotAvailable?.SetItem(item);
         }
 
         public void RemoveItem(ItemSlot itemSlot) => itemSlot.Clear();

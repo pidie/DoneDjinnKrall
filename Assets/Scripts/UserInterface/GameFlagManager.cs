@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace UserInterface
 {
-	public class FlagManager : MonoBehaviour
+	public class GameFlagManager : MonoBehaviour
 	{
 		[SerializeField] private GameFlag[] allFlags;
 		private Dictionary<string, GameFlag> _flagsByName;
-		public static FlagManager Instance { get; private set; }
+		public static GameFlagManager Instance { get; private set; }
 
 		private void Awake() => Instance = this;
 
