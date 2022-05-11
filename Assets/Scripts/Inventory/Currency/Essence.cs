@@ -1,14 +1,10 @@
 namespace Inventory.Currency
 {
-    public class Essence : Currency
+    [CreateAssetMenu(menuName = "Essence/Essence", fileName = "New Essence")]
+    public class Essence : IAccruable
     {
         public EssenceType essenceType;
-
-        protected override void HandlePickUp()
-        {
-            base.HandlePickUp();
-            // add the value to the correct essence type
-            Destroy(gameObject);
-        }
+        public string name => $"{essenceType} Essence";
+        public Sprite icon => essenceType.icon;
     }
 }
