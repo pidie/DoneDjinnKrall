@@ -2,20 +2,13 @@ using UnityEngine;
 
 namespace Inventory.Currency
 {
-    public abstract class Currency : MonoBehaviour, ICollectable
+    public abstract class Currency : ScriptableObject
     {
         protected int value;
-
-        public void OnPickUp() => HandlePickUp();
-
-        protected virtual void HandlePickUp()
-        {
-            
-        }
     }
 
-    interface ICollectable
+    public abstract class Currency<T> : Currency where T : Currency<T>
     {
-        void OnPickUp();
+        
     }
 }
