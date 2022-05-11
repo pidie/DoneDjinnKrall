@@ -12,12 +12,9 @@ namespace Inventory
 		{
 			if (min < 0) throw new ArgumentOutOfRangeException(nameof(min));
 			if (max < 0) throw new ArgumentOutOfRangeException(nameof(max));
-			if (min > max)
-			{
-				var _ = min;
-				min = max;
-				max = _;
-			}
+			if (min > max) throw new InvalidOperationException(
+				$"The minimum value ({min}) cannot be greater than the maximum value ({max}).");
+				
 			this.min = min;
 			this.max = max;
 		}
