@@ -17,6 +17,6 @@ namespace Inventory.Currency
         public override Currency<T> operator +(Currency<T> a, Currency<T> b) => new Currency<T>(a.Quantity + b.Quantity);
         public override Currency<T> operator -(Currency<T> a, Currency<T> b) => new Currency<T>(a.Quantity - b.Quantity); 
         public override Currency<T> operator *(Currency<T> a, Currency<T> b) => new Currency<T>(a.Quantity * b.Quantity);
-        public override Currency<T> operator /(Currency<T> a, Currency<T> b) => new Currency<T>(a.Quantity / b.Quantity);
+        public override Currency<T> operator /(Currency<T> a, Currency<T> b) => new Currency<T>((int) Mathf.Round(a.Quantity / b.Quantity));
     }
 }
