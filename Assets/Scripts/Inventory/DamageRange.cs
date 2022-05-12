@@ -39,7 +39,7 @@ namespace Inventory
 
 		public DamageRange ModifyMax(int newMax) => new DamageRange(min, newMax + max);
 
-		public override DamageRange operator +(DamageRange a, DamageRange b) => new DamageRange(a.min + b.min, a.max + b.max);
-		public override DamageRange operator -(DamageRange a, DamageRange b) => new DamageRange(a.min - b.min, a.max - b.max);
+		public static DamageRange operator +(DamageRange a, DamageRange b) => new DamageRange(a.min + b.min, a.max + b.max);
+		public static DamageRange operator -(DamageRange a, DamageRange b) => new DamageRange(a.min - b.min, a.max - b.max);
 	}
 }
