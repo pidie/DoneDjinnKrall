@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+
+/* todo : change InventorySize and inventorySize to something like EquipmentCategorySize or something - it should reflect 
+the amount of items available in each cateory, not necessarily the whole inventory */
 namespace Inventory
 {
     public class InventoryCollection : MonoBehaviour
@@ -11,6 +14,8 @@ namespace Inventory
 
         private const int InventorySize = 60;
         [SerializeField] private ItemSlot[] itemSlots;
+
+        public int inventorySize => InventorySize;
 
         private void Awake()
         {
@@ -42,7 +47,23 @@ namespace Inventory
 
         public ItemSlot[] GetAllItems() => itemSlots;
 
-        [ContextMenu(nameof(MoveItemsRight))]
+        // placeholder; to be replaced with a more robust, persistant set of lists for each category
+        public ItemSlot[] GetAllItemsByCategory(string category)
+        {
+            var items = new List<ItemSlot>();
+
+            foreach (var item in itemSlots)
+            {
+                foreach (var cat in item.GetEquipmentCategories())
+                {
+                    if (cat == category)
+                        items.Add(item);
+                }
+            }
+
+            return items.ToArray();
+        }
+
         private void MoveItemsRight()
         {
             var lastItem = itemSlots.Last().GetItem();
@@ -51,6 +72,8 @@ namespace Inventory
             
             itemSlots.First().SetItem(lastItem);
         }
+
+        // todo : create SwapItems() method and maybe a SwapAndShiftItems() method.
 
         public void Bind(List<SlotData> slotDatas)
         {

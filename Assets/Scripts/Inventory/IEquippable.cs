@@ -11,7 +11,7 @@ public interface IEquippable
     {
         if (!unequippedItems.Contains(item))
             throw new Exception($"Item must be in inventory and unequipped; tried {item.name} ")
-            
+
         if (activeItem != null)
             unequippedItems.Add(UnequipItem(activeItem));
 
@@ -20,3 +20,5 @@ public interface IEquippable
     */
     public Item UnequipItem(Item item);
 }
+
+// todo : move this functionality to be handled solely by the InventoryManager or the InventoryCollection
