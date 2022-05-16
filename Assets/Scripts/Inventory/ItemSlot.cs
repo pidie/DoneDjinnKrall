@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Inventory
 {
+	// todo : rename to InventoryItemSlot
 	[Serializable]
 	public class ItemSlot
 	{
@@ -11,7 +12,7 @@ namespace Inventory
 		
 		private Item _item;
 		private SlotData _slotData;
-
+		private string[] equipmentCategories;
 
 		public void SetItem(Item item)
 		{
@@ -29,6 +30,7 @@ namespace Inventory
 
 		public void Clear() => _item = null;
 
+		public string[] GetEquipmentCategories() => equipmentCategories;
 
 		public void Bind(SlotData slotData)
 		{
@@ -38,6 +40,7 @@ namespace Inventory
 		}
 	}
 	
+	// todo : rename to InventoryItemSlotData
 	[Serializable]
 	public class SlotData
 	{

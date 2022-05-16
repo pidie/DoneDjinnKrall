@@ -8,5 +8,6 @@ namespace Inventory.Enhancements
 		public int level;
 		public int experience;
 		public Sprite icon;
+		public Dictionary<Currency, int> cost;
 	}
 }

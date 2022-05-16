@@ -3,8 +3,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
+// todo : rename to InventoryPanelEquipmentSlot
+
 namespace UserInterface
 {
+	/// Controls the Equipment selection section of the Inventory Panel ///
 	public class InventoryPanelSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 	{
 		[SerializeField] private Image itemIcon;
@@ -18,7 +22,8 @@ namespace UserInterface
 			_itemSlot.ItemChanged += UpdateIcon;
 
 			UpdateIcon();
-
+			
+			// inserted here to ensure deregistration - unsure if this is the correct place for this
 			_itemSlot.ItemChanged -= UpdateIcon;
 		}
 

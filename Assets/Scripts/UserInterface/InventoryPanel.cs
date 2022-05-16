@@ -21,6 +21,9 @@ namespace UserInterface
 				ToggleCanvas(!IsShowing);
 		}
 
+		// todo : rework the Bind method to be called for each EquipmentCategory
+		// does this method need to cycle through each equipment type to ensure that everything's been
+		// covered, or does it not matter?
 		public void Bind(InventoryCollection inventory)
 		{
 			var panelSlots = GetComponentsInChildren<InventoryPanelSlot>();
