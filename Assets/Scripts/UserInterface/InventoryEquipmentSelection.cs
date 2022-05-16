@@ -12,7 +12,9 @@ namespace UserInterface
 
         private void Awake() 
         {
-            _buttons = new Button[];
+            _buttons = new Button[InventoryCollection.Instance.inventorySize];
+            foreach (var button in _buttons)
+                button.enabled = false;
         }
 
         // this method is called as an event by the buttons in the EquipmentSelection section.
