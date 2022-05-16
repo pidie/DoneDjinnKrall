@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace Inventory.Currencies
 {
-	[Serializable]
-	public class EssenceType
+	[CreateAssetMenu(menuName: "Currencies/Essence Type", fileName: "New Essence Type")]
+	public class EssenceType : ScriptableObject
 	{
-		[SerializeField] private Sprite icon;
+		public string name;
+		public Sprite icon;
 	}
 }
