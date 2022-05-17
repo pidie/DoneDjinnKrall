@@ -1,12 +1,14 @@
+using Inventory;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UserInterface
 {
-    public class InventoryItemButton
+    public class InventoryItemButton : MonoBehaviour
     {
         private Button _button;
         private ItemSlot _itemSlot;
-        private Image _icon;
+        private Sprite _icon;
 
         public InventoryItemButton(ItemSlot itemSlot)
         {

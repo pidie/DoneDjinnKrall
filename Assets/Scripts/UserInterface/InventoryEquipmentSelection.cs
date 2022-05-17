@@ -1,4 +1,5 @@
 using Inventory;
+using Inventory.Enhancements;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,7 @@ namespace UserInterface
         }
 
         // this method is called as an event by the buttons in the EquipmentSelection section.
-        public SetEquipmentCategory(string category) => _equipmentCategory = category;
+        public string SetEquipmentCategory(string category) => _equipmentCategory = category;
 
         public void ShowSelectableItems()
         {
@@ -38,16 +39,20 @@ namespace UserInterface
 
         public static bool PurchaseRequest(Enhancement enhancement)
         {
-            foreach (KeyValuePair<Currency, int> entry in enhancement.cost)
+            foreach (var entry in enhancement.cost)
             {
-                var currency = typeof(entry.Key);
-                
+                var currency = entry.Key;
+                var amount = entry.Value;
+                // var currency = typeof(entry.Key);
+
                 // entry.Key, entry.Value
                 // if the total of the currency is less than the cost:
                 // add the currency to a list
                 // prompt insufficient funds
                 // return false
             }
+
+            return true;
         }
     }
 }

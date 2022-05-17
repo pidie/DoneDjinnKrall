@@ -1,12 +1,11 @@
-using System;
 using UnityEngine;
 
 namespace Inventory.Currencies
 {
-	[CreateAssetMenu(menuName: "Currencies/Essence Type", fileName: "New Essence Type")]
-	public class EssenceType : ScriptableObject
+	[CreateAssetMenu(menuName = "Currencies/Essence Type", fileName = "New Essence Type")]
+	public class EssenceType : ScriptableObject, IAccruable
 	{
-		public string name;
+		public new string name;
 		public Sprite icon;
 	}
 }

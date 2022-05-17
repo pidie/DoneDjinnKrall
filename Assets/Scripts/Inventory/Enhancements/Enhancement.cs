@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Inventory.Currencies;
 using UnityEngine;
 
 namespace Inventory.Enhancements

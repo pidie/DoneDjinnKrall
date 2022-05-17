@@ -14,7 +14,7 @@ namespace Inventory.Ammo
 
 	public abstract class Ammo<T> : Ammo where T : IStackable
 	{
-		public override bool UpdateQuantity(Ammo<T> stack)
+		public bool UpdateQuantity(Ammo<T> stack)
         {
             var sum = Quantity + stack.Quantity;
 

@@ -15,8 +15,8 @@ namespace Inventory
 		{
 			if (Validate(value))
 			{
-				this.min = min;
-				this.max = max;
+				min = value;
+				max = value;
 			}
 		}
 		public DamageRange(int min, int max)
@@ -59,7 +59,7 @@ namespace Inventory
 			
 			return true;
 		}
-		private bool Validate(int min, int max = null)
+		private bool Validate(int min, int max)
 		{
 			if (min < 0) throw new ArgumentOutOfRangeException(nameof(min));
 			if (max < 0) throw new ArgumentOutOfRangeException(nameof(max));
